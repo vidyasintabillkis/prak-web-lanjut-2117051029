@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-image: url(b.jpg);
+    text-align: center;
+    background-size: cover;
+}
+
+.login2{
+    height: 380px;
+    width: 280px;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(257, 257, 257, 0.4);
+    position: absolute;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.login2 h1{
+    color: black;
+    padding-top: 30px;
+    font-size: 40px;
+}
+
+.login2 input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 8px;
+    margin: 8px;
+    outline: none;
+    color: black;
+}
+
+#submit {
+    padding-bottom: 20px;
+    padding: 10px;
+    margin: 30px;
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+}
+
+#submit:hover{
+    color: #89375F;
+    background-color: white;
+    cursor: pointer;
+}
+
+.card{
+    background: #89375F;
+    border-radius: 6px;
+    display: inline-block;
+    height: 380px;
+    width: 380px;
+    margin-top: 190px;
+    margin-bottom: 190px;
+    margin-left: 190px;
+    margin-right: 190px;
+    align-items: center;
+    box-shadow: 0 12px 13px rgba(0, 0, 0, 0.16), 0 12px 13px rgba(0, 0, 0, 0.16);
+}
+
+.img{
+    border-radius: 100%;
+    margin-top: 40px;
+    width: 132px;
+    height: 128px;
+}
+
+.name{
+    color: #EADBC8;
+}
+
+.npm{
+    color: #EADBC8;
+}
+
+.kelas{
+    color: #EADBC8;
+}
+
+.desc{
+    font-size: 14px;
+    margin-left: 65px;
+    margin-right: 65px;
+    color: aliceblue;
+}
