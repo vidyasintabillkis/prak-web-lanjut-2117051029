@@ -42,6 +42,16 @@ body{
     color: black;
 }
 
+.login2 select{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 8px;
+    margin: 8px;
+    outline: none;
+    color: black;
+}
+
 #submit {
     padding-bottom: 20px;
     padding: 10px;
@@ -95,4 +105,17 @@ body{
     margin-left: 65px;
     margin-right: 65px;
     color: aliceblue;
+}
+
+.alert{
+    height: 90px;
+    width: 270px;
+    top: 18%;
+    left: 50%;
+    background-color: rgba(210, 9, 9, 0.4);
+    position: absolute;
+    padding: 8px;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    border-radius: 10px;
 }

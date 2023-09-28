@@ -22,6 +22,28 @@ class UserModel extends Model
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
+    // Validation
+    protected $validationRules  = [
+        'nama' => [
+            'rules' => 'required', 
+            'errors' => [
+                'required' => '{field} wajib diisi*'
+            ]
+        ],
+        'npm' => [
+            'rules' => 'required', 
+            'errors' => [
+                'required' => '{field} wajib diisi*'
+            ]
+        ], 
+        'kelas' => [
+            'rules' => 'required', 
+            'errors' => [
+                'required' => '{field} wajib diisi*'
+            ]
+        ], 
+    ];
+    
     public function saveUser($data){
         $this->insert($data); 
     }
