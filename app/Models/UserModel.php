@@ -43,9 +43,16 @@ class UserModel extends Model
             ]
         ], 
     ];
+
+    protected $skipValidation = true; 
     
     public function saveUser($data){
+        // dd($this->insert($data));
         $this->insert($data); 
+    }
+
+    public function getUser(){
+        return $this->join('kelas', 'kelas.id=user.id_kelas')->findAll();
     }
 }
 
