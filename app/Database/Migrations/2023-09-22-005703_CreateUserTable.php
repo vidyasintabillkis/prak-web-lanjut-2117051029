@@ -49,6 +49,6 @@ class CreateUserTable extends Migration
 
     public function down()
     {
-        this->forge->dropTable('user', true);
+        $this->forge->dropTable('user', true);
     }
 }
