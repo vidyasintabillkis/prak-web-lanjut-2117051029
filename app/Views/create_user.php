@@ -8,10 +8,11 @@
         </div>
     <?php endif ?>
     <div class="login2">
-        <form action="<?= base_url('/user/store') ?>" method="POST">
+        <form action="<?= base_url('/user/store') ?>" method="POST" enctype="multipart/form-data">
             <h1>Profile</h1><br>
             <input type="text" name="nama" placeholder="Nama" id="input" value="<?= old('nama') ?>"><br>
             <input type="text" name="npm" placeholder="NPM" id="input" value="<?= old('npm') ?>"><br>
+            <input type="file" name="foto" placeholder="Foto" id="input"><br>
             <select name="kelas" id="kelas" placeholder="Kelas">
                 <option selected value="">Kelas</option>
                 <?php

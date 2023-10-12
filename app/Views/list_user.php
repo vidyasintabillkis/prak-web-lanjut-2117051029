@@ -10,7 +10,7 @@
                 Mahasiswa, <cite title="Source Title">cita-citanya jadi sukses tapi sukanya rebahan</cite>
             </figcaption>
         </figure>
-        <a href="#" class="btn btn-light btn-sm">Tambah Data</a>
+        <a href="<?= base_url('/user/create') ?>" class="btn btn-light btn-sm">Tambah Data</a>
 
         <div class="table-responsive"><br>
         <table class="table table-hover">
@@ -34,7 +34,7 @@
                 <td><?= $user['npm']?></td>
                 <td><?= $user['nama_kelas']?></td>
                 <td>
-                    <a href="#" type="button" class="btn btn-light btn-sm">
+                    <a href="<?= base_url('user/' . $user['id']) ?>" type="button" class="btn btn-light btn-sm">
                         Detail
                     </a>
                     <a href="#" type="button" class="btn btn-warning btn-sm">
