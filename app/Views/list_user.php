@@ -37,12 +37,14 @@
                     <a href="<?= base_url('user/' . $user['id']) ?>" type="button" class="btn btn-light btn-sm">
                         Detail
                     </a>
-                    <a href="#" type="button" class="btn btn-warning btn-sm">
+                    <a href="<?= base_url('/user/' . $user['id'] . '/edit') ?>" type="button" class="btn btn-warning btn-sm">
                         Edit
                     </a>
-                    <a href="#" type="button" class="btn btn-danger btn-sm">
-                        Delete
-                    </a>
+                    <form action="<?= base_url('user/' . $user['id']) ?>" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <?= csrf_field() ?>
+                        <button type="submit">Delete</button>
+                    </form>
                 </td>
                 </tr>
                 <?php
