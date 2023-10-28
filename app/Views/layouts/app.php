@@ -13,6 +13,15 @@
 </head>
 <body>
     <?= $this->renderSection('content') ?>
+    <header>
+        <a class="navbar-brand" href="#" style="font-size: 30px;">Maha<span>Siswa</span></a>
+        <ul class="navbar">
+            <li><a href="<?= base_url('/') ?>">Home</a></li>
+            <li><a href="<?= base_url('/user') ?>">Data User</a></li>
+            <li><a href="<?= base_url('/kelas') ?>">Data Kelas</a></li>
+        </ul>
+    </header>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

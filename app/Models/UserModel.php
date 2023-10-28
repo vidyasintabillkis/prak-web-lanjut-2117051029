@@ -26,21 +26,15 @@ class UserModel extends Model
     protected $validationRules  = [
         'nama' => [
             'rules' => 'required', 
-            'errors' => [
-                'required' => '{field} wajib diisi*'
-            ]
+            'errors' => ['required' => '{field} wajib diisi*']
         ],
         'npm' => [
             'rules' => 'required', 
-            'errors' => [
-                'required' => '{field} wajib diisi*'
-            ]
+            'errors' => ['required' => '{field} wajib diisi*']
         ], 
         'kelas' => [
             'rules' => 'required', 
-            'errors' => [
-                'required' => '{field} wajib diisi*'
-            ]
+            'errors' => ['required' => '{field} wajib diisi*']
         ], 
     ];
 
