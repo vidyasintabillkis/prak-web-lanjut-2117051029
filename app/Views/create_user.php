@@ -1,24 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create User</title>
-    <link rel="stylesheet" href="<?= base_url("assets/css/style.css")?>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap"rel="stylesheet">
-</head>
-<body>
-    <div class="login2">
-        <form action="<?= base_url('/user/store') ?>" method="POST">
-            <h1>Profile</h1><br>
-            <input type="text" name="nama" placeholder="Nama" id="input"><br>
-            <input type="text" name="npm" placeholder="NPM" id="input"><br>
-            <input type="text" name="kelas" placeholder="Kelas" id="input"><br>
-            <input type="submit" name="submit" value="Simpan" id="submit"><br>
+<?= $this->extend('layouts/app') ?>
+<?= $this->section('content') ?> 
+    <div class="container">
+        <?php if(session()->getFlashdata('errors')) : ?>
+            <div class="col-sm-15">
+                <div class="alert alert-danger" role="alert">
+                    <?= session()->getFlashdata('errors') ?>
+                </div>
+            </div>
+        <?php endif ?>
+        <form method="POST" action="<?= base_url('/user/store') ?>" enctype="multipart/form-data">
+            <div class="mb-3 row">
+                <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nama" name="nama">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="npm" class="col-sm-2 col-form-label">NPM</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="npm" name="npm">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="foto" class="col-sm-2 col-form-label">Foto</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="file" name="foto" id="foto">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="kelas" class="col-sm-2 col-form-label">Kelas</label>
+                    <div class="col-sm-10">
+                        <select class="form-select" aria-label="Default select example" name="kelas">
+                            <option selected value="">Pilih Kelas</option>
+                            <?php
+                                foreach ($kelas as $item) {
+                            ?>
+                            <option value="<?= $item['id']?>">
+                                <?= $item['nama_kelas'] ?>
+                            </option>
+                            <?php
+                                }
+                            ?> 
+                        </select>
+                    </div>
+            </div>
+
+            <button type="submit" name= "submit" value="submit" id="submit" class="btn btn-light btn-sm float-end">Simpan</button>
+            <a href="<?= base_url('/user') ?>" type="button" class="btn btn-warning btn-sm float-end">Kembali</a>
         </form>
     </div>
-</form>
-</body>
-</html>
+<?= $this->endSection() ?> 
+
