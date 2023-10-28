@@ -1,75 +1,11 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    list-style: none;
-}
-
-body{
-    background-image: url(b.jpg);
-    text-align: center;
-    background-size: cover;
-}
-
-.login2{
-    height: 440px;
-    width: 280px;
-    top: 50%;
-    left: 50%;
-    background-color: rgb(257, 257, 257, 0.4);
-    position: absolute;
-    padding: 10px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    border-radius: 20px;
-}
-
-.login2 h1{
-    color: black;
-    padding-top: 25px;
-    font-size: 40px;
-}
-
-.login2 input{
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid black;
-    padding: 6px;
-    margin: 8px;
-    outline: none;
-    color: black;
-}
-
-.login2 select{
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid black;
-    padding: 8px;
-    margin: 8px;
-    outline: none;
-    color: black;
-}
-
-#submit {
-    padding-bottom: 20px;
-    padding: 10px;
-    margin: 30px;
-    width: 200px;
-    border-radius: 20px;
-    border: none;
-}
-
-#submit:hover{
-    color: #89375F;
-    background-color: white;
-    cursor: pointer;
-} */
-
 .card{
     text-align: center;
     background: #8CC0DE;
+=======
+}
+
+.card{
+    background: #89375F;
     border-radius: 6px;
     display: inline-block;
     height: 380px;
@@ -98,7 +34,6 @@ body{
 
 .kelas{
     color: #FFF0CE;
-}
 
 .desc{
     font-size: 14px;
@@ -106,20 +41,7 @@ body{
     margin-right: 65px;
     color: #0C356A;
 }
-
-/* .alert{
-    height: 90px;
-    width: 270px;
-    top: 18%;
-    left: 50%;
-    background-color: rgba(210, 9, 9, 0.4);
-    position: absolute;
-    padding: 8px;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    border-radius: 10px;
-} */
-
+  
 *{
     padding: 0;
     margin: 0;
