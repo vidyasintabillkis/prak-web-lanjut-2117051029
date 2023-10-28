@@ -25,15 +25,15 @@ class UserController extends BaseController
         return view('list_user', $data);
     }
 
-    public function profile($nama="", $kelas="", $npm="")
-    {
-        $data = [
-            'nama' => $nama,
-            'kelas' => $kelas,
-            'npm' => $npm,
-        ]; 
-        return view('profile', $data);
-    }
+    // public function profile($nama="", $kelas="", $npm="")
+    // {
+    //     $data = [
+    //         'nama' => $nama,
+    //         'kelas' => $kelas,
+    //         'npm' => $npm,
+    //     ]; 
+    //     return view('profile', $data);
+    // }
 
     public function create(){
 

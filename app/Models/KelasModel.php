@@ -22,7 +22,36 @@ class KelasModel extends Model
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
-    public function getKelas(){
-        return $this->findAll();
+    protected $validationRules  = [
+        'nama_kelas' => [
+            'rules' => 'required', 
+            'errors' => [
+                'required' => '{field} wajib diisi*'
+            ]
+        ],
+    ];
+
+    protected $skipValidation = true; 
+
+    public function saveKelas($data){
+        // dd($this->insert($data));
+        $this->insert($data); 
     }
+
+    public function getKelas($id = null){
+        if($id != null){
+            return $this->select('kelas.*')->find($id); 
+        }
+        
+        return $this->select('kelas.*')->findAll();
+    }
+
+    public function updateKelas($data, $id){
+        return $this->update($id, $data); 
+    }
+
+    public function deleteKelas($id){
+        return $this->delete($id);
+    }
+    
 }
